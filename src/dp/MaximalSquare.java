@@ -1,5 +1,8 @@
+package dp;
+
 /*
-Questions: Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+Questions: 221
+    Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 
 Solution:
     Algorithm: DP
@@ -16,8 +19,17 @@ Solution:
         Space: O(rowLen * columnLen)
 
  */
-class Solution {
-    public int maximalSquare(char[][] matrix) {
+public class MaximalSquare {
+    public static void main(String[] args) {
+        char[][] input = {
+                {'1', '0', '1', '0', '0'},
+                {'1', '0', '1', '1', '1'},
+                {'1', '1', '1', '1', '1'},
+                {'1', '0', '0', '1', '0'}};
+        System.out.println(maximalSquare(input));
+    }
+
+    public static int maximalSquare(char[][] matrix) {
         if(matrix.length == 0) {
             return 0;
         }
